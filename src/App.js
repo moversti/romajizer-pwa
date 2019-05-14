@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Boksi from "./Boksi";
 
 function App() {
+  const [value, setValue] = useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='areacontainer'>
+        <Boksi to="r" value={value} setValue={setValue} />
+      </div>
+      <div className='areacontainer'>
+        <Boksi to="k" value={value} setValue={setValue} />
+      </div>
     </div>
   );
 }
